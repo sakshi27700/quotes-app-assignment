@@ -4,10 +4,10 @@
 A Next.js application that allows users to log in, view quotes, and create new quotes with media uploads. The app is built using Material UI for styling and Next.js for routing. It also integrates with various APIs for login, media upload, and quote management.
 
 ## Features
-
+- **Home:** Home Page of the app with Welcome text and a link to go to login.
 - **Login:** Authenticate users using a username and OTP.
 - **Quotes Display:** Paginated list of quotes showing images, overlaid text, and additional metadata like the username and creation date.
-- **Create New Quote:** Upload a new image, provide text, and submit it as a new quote.
+- **Add New Quote:** Upload a new image, provide text, and submit it as a new quote.
 - **Logout:** Securely log out and redirect to the login page.
 
 ## Technologies Used
@@ -19,21 +19,24 @@ A Next.js application that allows users to log in, view quotes, and create new q
 
 ## Pages Overview
 
-1. **Login Page**: 
+1. **Home Page**:
+   - Click on the Go to Login link.
+
+2. **Login Page**: 
    - Username and OTP inputs for authentication.
    - Button to submit login credentials.
 
-2. **Quotes List Page**:
+3. **Quotes List Page**:
    - Displays a paginated list of quotes with images and text.
    - Each quote displays the associated username and creation time.
    - Floating Action Button (FAB) to add new quotes.
    - Stops pagination when no more data is available.
 
-3. **Quote Creation Page**:
+4. **Quote Creation Page**:
    - Upload an image file and input text for the new quote.
    - On submission, the quote is created.
 
-4. **Logout Functionality**:
+5. **Logout Functionality**:
    - Logout button on the top right corner of the Quotes List and Create Quote pages.
    - Redirects to the login page on logout.
 
@@ -42,7 +45,7 @@ A Next.js application that allows users to log in, view quotes, and create new q
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/my-quotes-app.git
+git clone https://github.com/sakshi27700/quotes-app-assignment.git
 cd my-quotes-app
 ```
 
