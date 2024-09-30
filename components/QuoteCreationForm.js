@@ -16,7 +16,7 @@ export default function QuoteCreationForm({ token, onLogout }) {
     formData.append('file', uploadedFile);
 
     try {
-      const response = await axios.post('https://crafto.app/crafto/v1.0/media/assignment/upload', formData, {
+      const response = await axios.post(process.env.NEXT_PUBLIC_UPLOAD_API_URL, formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
       setMediaUrl(response.data.mediaUrl);
@@ -28,7 +28,7 @@ export default function QuoteCreationForm({ token, onLogout }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('https://assignment.stage.crafto.app/postQuote', {
+      await axios.post(process.env.NEXT_PUBLIC_POST_QUOTE_API_URL, {
         text,
         mediaUrl,
       }, {

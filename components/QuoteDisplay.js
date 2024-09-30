@@ -12,7 +12,7 @@ export default function QuoteDisplay({ token , onLogout}) {
 
   const fetchQuotes = async () => {
     try {
-      const response = await axios.get(`https://assignment.stage.crafto.app/getQuotes?limit=${limit}&offset=${offset}`, {
+      const response = await axios.get(`${process.env.NEXT_PUBLIC_GET_QUOTES_API_URL}?limit=${limit}&offset=${offset}`, {
         headers: {
           Authorization: token,
         },
@@ -53,7 +53,7 @@ export default function QuoteDisplay({ token , onLogout}) {
               <CardContent>
                 <Typography variant="h6">{quote.text}</Typography>
                 <Typography variant="body2" color="textSecondary">
-                  {quote.username} - {quote.created_at}
+                  {quote.username} - {quote.createdAt}
                 </Typography>
               </CardContent>
             </Card>

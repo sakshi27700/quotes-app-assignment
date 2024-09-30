@@ -10,7 +10,7 @@ export default function UserAuthForm({ onLoginSuccess }) {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://assignment.stage.crafto.app/login', {
+      const response = await axios.post(process.env.NEXT_PUBLIC_LOGIN_API_URL, {
         username,
         otp,
       });
